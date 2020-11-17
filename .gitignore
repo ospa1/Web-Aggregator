@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pycharm
+.idea
+
+# enviroment
+wa_env
+
+web_aggregator/web_aggregator/secretkey.txt
