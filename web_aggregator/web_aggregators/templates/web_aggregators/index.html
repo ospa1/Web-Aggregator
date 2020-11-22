@@ -15,6 +15,18 @@
     <title>Web Aggregator</title>
 </head>
 <body>
-    <h1>body</h1>
+    <h1>{{ sources }}</h1>
+
+    {% for website, link in links %}
+        <h1>{{ website }}</h1>
+        {% for href, title in link %}
+            <a href={{href}}>{{ title }}</a>
+            <p>{{ href }}</p>
+        {% empty %}
+            <p>no links</p>
+        {% endfor %}
+    {% empty %}
+        <p>no data</p>
+    {% endfor %}
 </body>
 </html>
